@@ -1,0 +1,125 @@
+/* Write rules in alphabetical order to reduce cognitive load */
+
+#container {
+  align-items: center;
+  display: grid;
+  grid-template-areas: "main" "footer";
+  grid-template: 1fr 100px / 1fr;
+  justify-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  display: grid;
+  grid-template: 63% 1fr / 1fr 2fr 1fr;
+  grid-template-areas: ". aside ." ". social .";
+  height: 100%;
+  width: 100%;
+}
+
+.aside {
+  align-items: center;
+  grid-area: aside;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.social-links {
+  grid-area: social;
+}
+
+.picture-image {
+  display: block;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+/* 3. Specific */
+
+.social-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 4rem;
+}
+
+.wallpaper {
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.wallpaper img {
+  height: 100%;
+  position: absolute;
+  width: 100vw;
+}
+
+#container {
+  animation-duration: 5s;
+  animation-name: fadein;
+  opacity: 1;
+  transition-property: opacity;
+  transition-duration: 5s;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.name {
+  /* 2.25rem = 36px */
+  font-size: 2.5rem;
+  /* Line height first */
+}
+
+.job {
+  color: #ffe479;
+  font-size: 2em;
+  margin: 1rem;
+}
+
+.picture {
+  /* makes the picture high as it is wide making it a square at all times
+  padding-top: 100%; */
+  /* Acts a reference point for it's to absolute positioned children 
+  .picture-shadow and .picture-image*/
+  position: relative;
+  max-height: 20rem;
+  max-width: 20rem;
+  width: 100%;
+}
+
+.picture-image {
+  border-radius: 961003px;
+}
+
+/* 4. Responsiveness */
+
+@media screen and (min-width: 800px) {
+  .about-me {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+}
+
+.social-links a i {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.social-links a:hover i {
+  opacity: 0.5;
+}

@@ -1,0 +1,33 @@
+html {
+  /* Sets the overall tone */
+  /* background-color: #5f45bb;
+  background-image: linear-gradient(to bottom right, #180cac, #d054e4); */
+  color: #fff;
+  /* Sets base typography */
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  /* Browser specific
+  Makes the page more readable */
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  /* Each _line_ of text will be 1.5x
+    the element's current font size
+    font-size = 16,
+    16 * 1.5 = 24px high
+    */
+  line-height: 1.5;
+  /* height is set to 100% of the viewport height */
+  min-height: 100vh;
+  /* 300 px prevents the page from being too narrow */
+  min-width: 400px;
+  /* Prevents page from scrolling horizontally.
+  Preserves vertical scroll */
+  overflow-x: hidden;
+  text-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: currentColor;
+  cursor: pointer;
+  text-decoration: none;
+}

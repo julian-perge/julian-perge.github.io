@@ -1,20 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./src/css/minireset.min.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./src/css/layout.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="./src/css/minireset.min.css" />
-  <link rel="stylesheet" type="text/css" href="./src/css/styles.css" />
-  <link rel="stylesheet" type="text/css" href="./src/css/layout.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" />
+    <title>Julian Perge Portfolio</title>
+  </head>
 
-  <title>Julian Perge Portfolio</title>
-</head>
+  <body>
+    <div class="wallpaper">
+      <img src="./src/img/background.png" alt="starry background" />
+      <img
+        class="inlay"
+        src="./src/img/libra-inlay.png"
+        alt="libra sign, with hands laid outward near the base and to the sides of the sign"
+      />
+    </div>
 
-<body>
-	<h1>Currently under construction. Will be live soon with ReactJS!</h1>
-</body>
+    <div id="container">
+      <main class="main-content">
+        <aside class="aside">
+          <h1 class="name">Julian Perge</h1>
+          <h2 class="job">Full Stack Web Developer</h2>
+          <figure id="picture" class="picture">
+            <img
+              id="pictureImage"
+              class="picture-image"
+              src="./src/img/coal.jpg"
+              srcset="./src/img/coal.jpg 1x, ./src/img/coal@2x.jpg 2x, ./src/img/coal@3x.jpg 3x"
+              alt="Portrait of Julian Perge"
+              width="256"
+              height="256"
+            />
+          </figure>
+        </aside>
 
+        <section class="social-links">
+          <a class="social-link" href="mailto:julianperge@gmail.com">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a class="social-link" href="https://github.com/julian-perge?tab=repositories">
+            <i class="fab fa-github"></i>
+          </a>
+          <a class="social-link" href="https://www.linkedin.com/in/julian-perge/">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        </section>
+      </main>
+
+      <footer>&copy; Intergalactic Federation of FullStack Web Design</footer>
+    </div>
+
+    <script charset="utf-8" src="./src/index.jsx"></script>
+  </body>
 </html>
