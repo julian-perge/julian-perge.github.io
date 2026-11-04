@@ -14,14 +14,14 @@ Platform and DevOps engineer with 7+ years of full-stack and cloud-platform expe
 
 ### Senior DevSecOps/Software Engineer | Armaments Research Company | May 2022 - October 2026
 
-- Drove every Kubernetes minor-version upgrade on four EKS clusters spanning commercial and govcloud - 12 hops from 1.23 to 1.35 over 2+ years.
+- Drove every Kubernetes minor-version upgrade on four EKS clusters spanning commercial and GovCloud, 12 hops from 1.23 to 1.35 over 2+ years.
 - Drove the EKS-to-ECS Fargate migration for IL6 compliance: deployed TAK Server on ECS Fargate with Aurora Serverless v2, NLB, EFS and Keycloak SSO, and built shared ECS and Lambda deploy CI templates.
-- Consolidated observability for four EKS environments onto a single hub cluster: replaced Prometheus metrics stack with Grafana Mimir + Tempo + Loki fed by OpenTelemetry Collectors, cutting per-cluster pod count from ~32 to ~14 and node groups from 4 to 1. Later cut cross-AZ data transfer spend by ~$2.5k/month by compressing Mimir and Loki ingester traffic.
+- Consolidated observability for four EKS environments onto a single hub cluster: replaced the Prometheus metrics stack with Grafana Mimir + Tempo + Loki fed by OpenTelemetry Collectors, cutting per-cluster pod count from ~32 to ~14 and node groups from 4 to 1. Later cut cross-AZ data transfer spend by ~$2.5k/month by compressing Mimir and Loki ingester traffic.
 - Moved all Kubernetes resource provisioning out of OpenTofu and into ArgoCD GitOps across four clusters, cutting the OpenTofu CI pipeline runtime from 120-150s to 60-75s (~50% reduction).
 - Replaced internet-exposed SSH bastions in 4 AWS environments, including GovCloud, with Cloudflare Tunnel connectors on ECS Fargate, after triaging 237 Security Hub findings and tracing a live GuardDuty SSH brute-force alert.
 - Hardened the platform security posture: deployed DefectDojo for centralized CVE and vulnerability management, cutting one service's open CVEs from ~90 to ~15 alongside Renovate dependency automation, and stood up Keycloak as a GitLab-backed SSO / OIDC identity provider.
 - Designed and rolled out autoscaling GitLab CI runners across the organization, cutting runner EC2 spend by over 50% and guaranteeing job start under ~90 seconds.
-- Built and maintained a shared multi-arch CI base-image library with the common toolbelt baked in and ECR Credential Helper preinstalled; eliminated per-job package manager install steps across every service CI pipeline, and removed Docker Hub pull-rate-limit failures by hosting in GitLab Container Registry.
+- Built and maintained a shared multi-arch CI base-image library with the common toolbelt baked in and ECR Credential Helper preinstalled, eliminating per-job package manager install steps across every service CI pipeline, and removed Docker Hub pull-rate-limit failures by hosting in GitLab Container Registry.
 - Built a custom sbt AutoPlugin and a single inherited GitLab CI template adopted by 15+ Java/Scala services, then leveraged both to drive the org-wide Java 11 to Java 21 + Play 2 to Play 3 + Akka to Apache Pekko migration in ~3 weeks. Later moved those services to committed Dockerfiles and a GitLab Maven virtual registry, ending build failures from Maven Central rate limits.
 - Built a shared release-promotion CI component for 6 deployment repos, replacing ~1,000 lines of copy-pasted Python, with an enforced changelog convention and a Trivy vulnerability gate on every prod promotion.
 - Built an AI merge-request review CI component on AWS Bedrock (gpt-oss-120b by default) at ~$0.008 per review, with a fixed evaluation set for comparing models.
@@ -43,7 +43,7 @@ Platform and DevOps engineer with 7+ years of full-stack and cloud-platform expe
 
 - Production support for the ACH and wire-transfer Payment Center: rewrote SQL scripts that decreased Oracle navigation time by 35%, and authored XSL-transform-based bash scripts that emailed daily security-issue reports.
 - Re-engineered ASG-Zena job scheduling for the Payment Center and Escrow Solutions vendor apps, increasing informational output and file-operation stability.
-- Built remote testing and development environments using SSMS and bash scripts; debugged Spring Boot / Java exceptions through the full production stack.
+- Built remote testing and development environments using SSMS and bash scripts, and debugged Spring Boot / Java exceptions through the full production stack.
 
 ## Skills & Abilities
 
@@ -74,20 +74,20 @@ C# / Unity video-game mods on Thunderstore. Combined downloads across active mod
 Game: Inscryption
 
 - Solo revived and rebuilt a major _Inscryption_ total-conversion mod from the ground up (January - April 2022, 2,348 personal commits across ~4 months of full-time solo development), then grew it into a small Discord-coordinated team that continues the project today.
-- Authored 61 pull requests covering custom cinematic events driven by imported Blender models, animated card behaviors, and bespoke card-ability implementations on top of runtime-patching stack.
+- Authored 61 pull requests covering custom cinematic events driven by imported Blender models, animated card behaviors, and bespoke card-ability implementations on a runtime-patching stack.
 
 **InscryptionAPI** (450,000+ downloads, [github.com/InscryptionModding/InscryptionAPI](https://github.com/InscryptionModding/InscryptionAPI))
 
 Game: Inscryption
 
 - Core mod-loader framework for the entire _Inscryption_ modding ecosystem; contributed 21 pull requests (16 merged) and ~85 commits as part of the maintainer team between November 2021 and March 2022.
-- Work focused on refactoring patches layout, adding utility functions, and shipping sprite / portrait extension methods consumed by every downstream mod.
+- Work focused on refactoring the patches layout, adding utility functions, and shipping sprite / portrait extension methods consumed by every downstream mod.
 
 **OpenMonitors** (250,000+ downloads, [github.com/julian-perge/LC_OpenMonitors](https://github.com/julian-perge/LC_OpenMonitors))
 
 Game: Lethal Company
 
-- Extended in-game Unity ship-monitor objects to surface live teammate cameras, planet weather conditions, and per-crewmate alive/dead state - repurposing the game's existing monitor infrastructure rather than overlaying a new UI layer.
+- Extended in-game Unity ship-monitor objects to surface live teammate cameras, planet weather conditions, and per-crewmate alive/dead state, repurposing the game's existing monitor infrastructure rather than overlaying a new UI layer.
 
 ## Education
 
