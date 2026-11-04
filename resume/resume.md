@@ -8,7 +8,7 @@ Columbus, OH<!--phone--> | <julianperge@gmail.com> | [github.com/julian-perge](h
 
 ## Summary
 
-Platform and DevOps engineer with 7+ years of full-stack and cloud-platform experience. At Armaments Research Company I built and operated the AWS platform that powered a multi-product engineering org across commercial and GovCloud environments. Focus areas: GitOps-driven Kubernetes (ArgoCD / Helm), OpenTelemetry-based observability, shared CI/CD components and base images, and shared SBT/Scala build tooling for 15+ Java/Scala services. Drove the EKS-to-ECS migration to meet IL6 compliance requirements. Prior experience at **JPMorgan Chase** modernizing a COBOL/mainframe application into a Java 11 + Spring Boot microservice suite, and at **Huntington National Bank** on production support for ACH/wire-transfer systems.
+Platform and DevOps engineer with 7+ years of full-stack and cloud-platform experience. At Armaments Research Company I built and operated the AWS platform that powered a multi-product engineering org across commercial and GovCloud environments. Focus areas: GitOps-driven Kubernetes (ArgoCD / Helm), OpenTelemetry-based observability, shared CI/CD components and base images, and shared SBT/Scala build tooling for 15+ Java/Scala services.
 
 ## Experience
 
@@ -16,7 +16,7 @@ Platform and DevOps engineer with 7+ years of full-stack and cloud-platform expe
 
 - Drove every Kubernetes minor-version upgrade on four EKS clusters spanning commercial and govcloud - 12 hops from 1.23 to 1.35 over 2+ years.
 - Drove the EKS-to-ECS Fargate migration for IL6 compliance: deployed TAK Server on ECS Fargate with Aurora Serverless v2, NLB, EFS and Keycloak SSO, and built shared ECS and Lambda deploy CI templates.
-- Consolidated observability for four EKS environments onto a single hub cluster: replaced Prometheus metrics stack with Grafana Mimir + Tempo + Loki fed by OpenTelemetry Collectors, standardizing services on JSON structured logging for queryable, audit-ready logs and cutting per-cluster pod count from ~32 to ~14 and node groups from 4 to 1. Later cut cross-AZ data transfer spend by ~$2.5k/month by compressing Mimir and Loki ingester traffic.
+- Consolidated observability for four EKS environments onto a single hub cluster: replaced Prometheus metrics stack with Grafana Mimir + Tempo + Loki fed by OpenTelemetry Collectors, cutting per-cluster pod count from ~32 to ~14 and node groups from 4 to 1. Later cut cross-AZ data transfer spend by ~$2.5k/month by compressing Mimir and Loki ingester traffic.
 - Moved all Kubernetes resource provisioning out of OpenTofu and into ArgoCD GitOps across four clusters, cutting the OpenTofu CI pipeline runtime from 120-150s to 60-75s (~50% reduction).
 - Replaced internet-exposed SSH bastions in 4 AWS environments, including GovCloud, with Cloudflare Tunnel connectors on ECS Fargate, after triaging 237 Security Hub findings and tracing a live GuardDuty SSH brute-force alert.
 - Hardened the platform security posture: deployed DefectDojo for centralized CVE and vulnerability management, cutting one service's open CVEs from ~90 to ~15 alongside Renovate dependency automation, and stood up Keycloak as a GitLab-backed SSO / OIDC identity provider.
@@ -54,12 +54,9 @@ Platform and DevOps engineer with 7+ years of full-stack and cloud-platform expe
 
 **Cloud & Platform**
 
-- AWS: EKS, ECS / Fargate, Lambda, EC2, S3, IAM, ECR, Aurora / RDS, KMS, Bedrock, Spot Fleet, IRSA, MSK, VPC, SSM / Parameter Store
+- AWS: EKS, ECS / Fargate, Lambda, EC2, S3, IAM, ECR, Aurora / RDS, KMS, Bedrock, IRSA, MSK, VPC, SSM / Parameter Store
 - Kubernetes ecosystem: Helm, ArgoCD, OpenTofu / Terraform, Renovate
-
-**Security & Identity**
-
-- Keycloak (SSO / OIDC), Cloudflare Tunnel, External Secrets Operator, DefectDojo, Trivy, Renovate, AWS Security Hub / GuardDuty, AWS IAM / IRSA, Kubernetes RBAC
+- Platform tooling: Keycloak (SSO / OIDC), Cloudflare Tunnel, External Secrets Operator, DefectDojo, Trivy, Kubernetes RBAC
 
 **Data, Messaging, Observability**
 
