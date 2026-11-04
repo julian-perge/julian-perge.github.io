@@ -1,0 +1,16 @@
+{
+  "name": "julian-perge.github.io",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun run src/build.ts",
+    "check:types": "bun check",
+    "fmt": "oxfmt",
+    "lint": "oxlint --deny-warnings"
+  },
+  "devDependencies": {
+    "@types/bun": "1.4.4",
+    "oxfmt": "0.76.0",
+    "oxlint": "1.91.0"
+  }
+}

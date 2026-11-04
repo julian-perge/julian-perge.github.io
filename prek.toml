@@ -1,0 +1,87 @@
+#:schema https://www.schemastore.org/prek.json
+
+[[repos]]
+repo = "builtin"
+hooks = [
+  { id = "trailing-whitespace" },
+  { id = "end-of-file-fixer" },
+  { id = "check-added-large-files" },
+  { id = "check-merge-conflict" },
+  { id = "check-yaml" },
+  { id = "check-toml" },
+  { id = "check-json" },
+]
+
+# oxlint, oxfmt and the type check run from package.json's pinned versions, the same way the Bun repo runs oxlint.
+[[repos]]
+repo = "local"
+
+[[repos.hooks]]
+id = "oxfmt"
+name = "oxfmt"
+entry = "bun x oxfmt"
+language = "system"
+types_or = ["ts", "json", "css"]
+
+[[repos.hooks]]
+id = "oxlint"
+name = "oxlint"
+entry = "bun x oxlint --deny-warnings"
+language = "system"
+types = ["ts"]
+
+[[repos.hooks]]
+id = "bun-check"
+name = "bun check (types)"
+entry = "bun check"
+language = "system"
+types = ["ts"]
+pass_filenames = false
+
+# The lychee hook below checks links in the built Site, so this builds it first on every run.
+[[repos.hooks]]
+id = "build"
+name = "build the Site"
+entry = "bun run build"
+language = "system"
+pass_filenames = false
+always_run = true
+
+[[repos]]
+repo = "https://github.com/rvben/rumdl-pre-commit"
+rev = "v0.3.2"
+hooks = [{ id = "rumdl-check" }, { id = "rumdl-fmt" }]
+
+[[repos]]
+repo = "https://github.com/crate-ci/typos"
+rev = "v1.52.0"
+hooks = [{ id = "typos" }]
+
+# taplo-lint's default args fetch a schema catalog that taplo 0.9.3 can no longer parse.
+[[repos]]
+repo = "https://github.com/ComPWA/taplo-pre-commit"
+rev = "v0.9.3"
+hooks = [{ id = "taplo-format" }, { id = "taplo-lint", args = [] }]
+
+[[repos]]
+repo = "https://github.com/zizmorcore/zizmor-pre-commit"
+rev = "v1.32.0"
+hooks = [{ id = "zizmor" }]
+
+# Offline, lychee checks only the Site's own pages, files and anchors. CI checks every link online.
+[[repos]]
+repo = "https://github.com/lycheeverse/lychee"
+rev = "lychee-v0.24.2"
+
+[[repos.hooks]]
+id = "lychee"
+args = [
+  "--no-progress",
+  "--offline",
+  "--include-fragments",
+  "--root-dir",
+  "dist",
+  "dist",
+]
+pass_filenames = false
+always_run = true

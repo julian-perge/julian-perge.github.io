@@ -1,0 +1,9 @@
+[global]
+# Prose is written one paragraph per line, so line length is not limited.
+disable = ["MD013"]
+
+[per-file-ignores]
+# The resume uses bold lines as small subheadings because pandoc's PDF layout has no smaller heading level to spare.
+"resume/resume.md" = ["MD036"]
+# This file is a section inserted into the Resume page under the page's own heading.
+"content/looking-for.md" = ["MD041"]

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.DS_Store
+
+# Claude Code's local settings and the recall plugin's session log stay on this machine.
+.claude/settings.local.json
+.recall/
+
+# WebStorm's project files and its local MCP server config stay on this machine.
+.idea/
+.mcp.json
+
+# The phone number and the PDF that contains it are never published.
+resume/contact.local.yaml
+resume/*.private.pdf

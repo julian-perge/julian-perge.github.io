@@ -1,0 +1,2 @@
+# LinkedIn answers every automated request with HTTP 999, so its links can never pass a check.
+exclude = ['^https://(www\.)?linkedin\.com/']

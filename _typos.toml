@@ -1,0 +1,3 @@
+[default.extend-words]
+# TAK Server is the Team Awareness Kit server, not a misspelling of "take".
+TAK = "TAK"
