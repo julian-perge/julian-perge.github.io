@@ -18,7 +18,15 @@ build:
 
 # Build the Site and serve dist/ on http://localhost:4000.
 serve: build
-    bun -e 'Bun.serve({ port: 4000, fetch(req) { const path = new URL(req.url).pathname; return new Response(Bun.file("dist" + (path.endsWith("/") ? path + "index.html" : path))); } }); console.log("http://localhost:4000")'
+    #!/usr/bin/env bun
+    Bun.serve({
+      port: 4000,
+      fetch(req) {
+        const path = new URL(req.url).pathname;
+        return new Response(Bun.file("dist" + (path.endsWith("/") ? path + "index.html" : path)));
+      },
+    });
+    console.log("http://localhost:4000");
 
 # Fetch fresh Thunderstore download counts into content/downloads.json.
 downloads:
