@@ -37,8 +37,3 @@ resume-private:
 # Run every prek hook against every file.
 lint:
     prek run --all-files
-
-# Run the build job of the GitHub Actions workflow locally in Docker with wrkflw.
-# wrkflw 0.8.0 misses Docker Desktop's socket unless DOCKER_HOST names it, and then silently runs the steps on the Mac instead.
-ci-local:
-    DOCKER_HOST="$(docker context inspect --format '{{{{.Endpoints.docker.Host}}')" wrkflw run --runtime docker --job build .github/workflows/site.yml

@@ -36,7 +36,8 @@ Run `just` to list the recipes. The main ones:
 - `just resume-private` renders a PDF with the phone number from `resume/contact.local.yaml` (gitignored; one line, `phone: "..."`).
 - `just downloads` refreshes the download counts by hand.
 - `just lint` runs every prek hook: oxfmt, oxlint, `bun check`, rumdl, typos, taplo, zizmor, and an offline lychee check of the built Site.
-- `just ci-local` runs the workflow's build job in Docker with wrkflw.
+
+The workflow can't run end to end locally. wrkflw loses what `setup-bun` installs between steps, and local-ci's container blocks prek's hook clones and lychee-action's install. `just lint` covers the same checks, so test workflow changes on a pushed branch.
 
 ## Deployment
 
